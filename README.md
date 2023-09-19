@@ -1,39 +1,24 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# interactive_viewer_wrapper
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A widget based on Flutter's Interactive Viewer that helps widgets pinch zoom, double tap zoom, and return to its initial size when required.
+This package is based on the recent Interactive Viewer that Flutter introduced since version 1.20.
+The package is designed for zooming in on any widgets.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Installation
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Add this to your `pubspec.yaml` dependencies:
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```
+interactive_viewer_wrapper: ^0.0.1
 ```
 
-## Additional information
+## How to use
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Add the widget to your app like this (It automatically takes the size of the image you pass to it):
+
+```dart
+InteractiveViewerWrapper(
+          onScaleChanged: (scale) {},
+          child: childWidget,
+        ),
+```
